@@ -43,7 +43,7 @@ The configuration details of each machine may be found below.
 The machines on the internal network are not exposed to the public Internet. 
 
 Only the jump box machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-- <my home IP address>
+- my home IP address
 
 Machines within the network can only be accessed by me.
 
@@ -54,10 +54,10 @@ A summary of the access policies in place can be found in the table below.
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
 | Jump Box | Yes                 | varies               |
-| Web-01   | No                  | <my home IP address> |
-| Web-02   | No                  | <my home IP address> |
-| Web-03   | No                  | <my home IP address> |
-| ELK-VM   | No                  | <my home IP address> |
+| Web-01   | No                  | my home IP address   |
+| Web-02   | No                  | my home IP address   |
+| Web-03   | No                  | my home IP address   |
+| ELK-VM   | No                  | my home IP address   |
 
 ### ELK Configuration
 
@@ -117,9 +117,9 @@ Next, create a hosts files to run playbook on specific VMs by using:
 
 $ cd /etc/ansible
 $ cat > hosts <<EOF
-<your webserver private IPs>
+#your webserver private IPs
 
-<your ELK VM private IP>
+#your ELK VM private IP
 EOF
 
 Then run the playbook by:
